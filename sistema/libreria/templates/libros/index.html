@@ -12,9 +12,9 @@
     </div>
     <div class="card-body">
         <h4 class="card-title">Libros</h4>
-        
+        <table class="table table-primary">
+
         <div class="table-responsive">
-            <table class="table table-primary">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -31,7 +31,7 @@
                         <td scope="row">{{ libro.id}}</td>
                         <td>{{ libro.titulo }}</td>
                         <td>
-                            <img src="{{libro.imagen.url}}" height="100" alt="">
+                            <img src="{{libro.imagen}}" height="60px" alt="">
                             
                         
                         </td>
@@ -52,3 +52,4 @@
     </div>
 </div>
 {% endblock  %}
+

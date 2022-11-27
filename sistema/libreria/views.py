@@ -9,7 +9,6 @@ def nosotros(request):
     return render(request,'paginas/nosotros.html') 
 
 
-
 """ Interfaz de los libros """
 def libros(request):
     libro = Libro.objects.all()

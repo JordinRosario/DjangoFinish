@@ -25,7 +25,15 @@
           <a class="nav-item nav-link active" href="{% url 'inicio' %}" aria-current="page">Inicio</a>
           <a class="nav-item nav-link active" href="{% url 'libros' %}" aria-current="page">Libros</a>
           <a class="nav-item nav-link active" href="{% url 'nosotros' %}"aria-current="page">Nosotros</a>
+          {% if user.is_authenticated %}
+          <a class="nav-item nav-link active" href="{% url 'cerrarsesion' %}"aria-current="page">Cerrar Sesion</a>
+          <p class="nav-item nav-link active" style="color: green;"> {{ user }}</p>
+          {% else %}
+          <a class="nav-item nav-link active" href="{% url 'crearsesion' %}"aria-current="page">Crear sesion</a>
+          <a class="nav-item nav-link active" href="{% url 'iniciarsesion' %}"aria-current="page">Iniciar sesion</a>
+          {% endif %}
       </div>
+
   </nav>
   
   <main>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Iniciar sesion  {% endblock %}
+
+{% block contenido %} 
+
+<h1>Crear sesion</h1>
+<form action="{% url 'crearsesion' %}" method="POST">
+    {{error}}
+    {{error_clave}}
+    {% csrf_token %}
+    {{ crear_sesion.as_p }}
+    <input type="submit">
+</form>
+
+{% endblock %}
